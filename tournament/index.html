@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoot Me</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center font-weight-bolder display-4 title">Single Match</h5>
+                <div class="row mt-5 mb-5">
+                    <div class="col-md-5 text-left font-weight-bold text-monospace display-4 pfh">100%</div>
+                    <div class="col-md-2 text-center text-monospace font-weight-bold display-4">~</div>
+                    <div class="col-md-5 text-right text-monospace font-weight-bold display-4 psh">100%</div>
+                </div>
+            </div>
+            <div class="col-md-6 text-left fp">
+                <img src="assets/images/player_first.png" alt="First Player" class="img-fluid player">
+                <img src="assets/images/fire.png" class="fire d-none animate__animated animate__headShake animate__fast">
+            </div>
+            <div class="col-md-6 text-right sp">
+                <img src="assets/images/fire_second.png" class="fire d-none animate__animated animate__headShake animate__fast">
+                <img src="assets/images/player_second.png" alt="Second Player" class="img-fluid player">
+            </div>
+            <div class="col-md-12 text-center mt-5">
+                <button class="btn btn-primary btn-lg start-button animate__animated animate__fast" id="start" type="button">Fire 🔥</button>
+                <button class="btn btn-primary btn-lg start-torunament-button animate__animated animate__fast" id="start-torunament-button" type="button">Start a Tournament 🤼‍♀️</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

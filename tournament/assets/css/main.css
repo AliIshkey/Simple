@@ -1,0 +1,10 @@
+:root {
+    --animate-delay: 0.5s;
+}
+  
+.fire {
+    height: 70px;
+    vertical-align: top;
+    margin-top: 20px;
+}
+

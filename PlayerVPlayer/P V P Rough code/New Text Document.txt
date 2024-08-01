@@ -1,0 +1,50 @@
+var player1Health=100;
+var player2Health=100;
+
+let roundCounter=0;
+
+let lastname;
+console.log(localStorage.getItem("lastname"));
+//let player1Score=0;
+let p1score=0;
+let p2score=0;
+
+function shootbtn(){
+	var p1fire = Math.floor(Math.random() * 5);
+  var p2fire = Math.floor(Math.random() * 5);
+  
+  console.log("Player 1 Fire : "+p1fire);
+  console.log("Player 2 Fire : "+p2fire);
+    
+  document.getElementById("p1firescore").innerHTML=p1fire;
+  localStorage.setItem("p1score","p1firescore");
+  document.getElementById("p2firescore").innerHTML=p2fire;
+  localStorage.setItem("p2score","p2firescore");
+  
+  player1Health = player1Health - p2fire
+  player2Health = player1Health - p1fire
+
+  if(player2Health==0){
+  	p1score = p1score + 1;
+  }
+  if(player1Health==0){
+  	p2score = p2score + 1;
+  }
+  document.getElementById("grid-item-4").innerHTML=player1Score;
+  document.getElementById("grid-item-8").innerHTML=player2Score;
+  
+  roundcounter ++;
+  console.log(roundcounter)
+
+	if(roundcounter==5){
+  	if(p1score>p2score){
+    	gameOver("Player 1 won")
+    }
+    if(p2score>p1score){
+    	gameOver("Player 2 won")
+    }
+    if(p1score==p2score){
+    	gameOver("Match Draw")
+    }
+  }
+}
